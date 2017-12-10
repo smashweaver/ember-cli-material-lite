@@ -1,3 +1,21 @@
-<h2 id="title">Welcome to Ember</h2>
+{{#mdl-layout hasFixedHeader=true hasFixedDrawer=true}}
 
-{{outlet}}
+  {{#mdl-layout-header}}
+    {{mdl-layout-icon}}
+    {{#mdl-layout-header-row}}
+      <h3>ember-cli-material-lite</h3>
+    {{/mdl-layout-header-row}}
+  {{/mdl-layout-header}}
+
+  {{#mdl-layout-drawer}}
+    {{#mdl-navigation}}
+      {{mdl-navigation-link "Home" "index"}}
+      {{mdl-navigation-link "Button" "components.buttons"}}    
+    {{/mdl-navigation}}
+  {{/mdl-layout-drawer}}
+
+  {{#mdl-layout-content}}
+    {{outlet}}
+  {{/mdl-layout-content}}
+
+{{/mdl-layout}}
