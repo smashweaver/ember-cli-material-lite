@@ -1,1 +1,49 @@
-Material Design Lite Components
+<h3>Installation</h3>
+<div class="demo-group">
+  <div class="demo-group__snippet">
+    <pre class="hljs">
+    ember install ember-cli-material-lite  
+    </pre>
+  </div>
+</div>
+
+<h3>Usage</h3>
+<h5>Specify the following sass option in your app's ember-cli-build.js:</h5>
+<div class="demo-group">
+  <div class="demo-group__snippet">
+    <pre class="hljs">
+    var app = new EmberAddon(defaults, {
+      sassOptions: {
+        includePaths: [
+          'node_modules/material-design-lite/src'
+        ]
+      }
+    });
+    </pre>
+  </div>
+</div>
+
+<h5>Rename app/styles/app.css to app/styles/app.scss, then import material design lite's sass like so:</h5>
+<div class="demo-group">
+  <div class="demo-group__snippet">
+    <pre class="hljs">
+    @import "material-design-lite";
+    </pre>
+  </div>
+</div>
+
+<h5>To override material design lite's default <a href="https://github.com/google/material-design-lite/blob/3b749f1455f477927225723bd662ae9b51a8ca66/src/_variables.scss">colors</a>:</h5>
+<div class="demo-group">
+  <div class="demo-group__snippet">
+    <pre class="hljs">
+    @import "_color-definitions";
+    $color-primary: $palette-blue-grey-500;
+    $color-accent: $palette-red-500;
+
+    @import "material-design-lite";
+    </pre>
+  </div>
+</div>
+
+
+<h5>More on color definitions <a href="https://github.com/google/material-design-lite/blob/88872e672e41c56af0a78a35b34373b8c4a8c49d/src/_color-definitions.scss">here</a> and color palettes <a href="https://material.io/guidelines/style/color.html#color-color-palette">here</a>.</h5>

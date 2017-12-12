@@ -1,6 +1,6 @@
-{{#mdl-layout hasFixedHeader=true hasFixedDrawer=true}}
+{{#mdl-layout hasFixedDrawer=true}}
 
-  {{#mdl-layout-header}}
+  {{#mdl-layout-header isScroll=true isSeamed=true}}
     {{mdl-layout-icon}}
     {{#mdl-layout-header-row}}
       <h3>ember-cli-material-lite</h3>
@@ -10,12 +10,15 @@
   {{#mdl-layout-drawer}}
     {{#mdl-navigation}}
       {{mdl-navigation-link "Home" "index"}}
-      {{mdl-navigation-link "Button" "components.buttons"}}    
+      {{mdl-navigation-link "Buttons" "components.buttons"}}
+      {{mdl-navigation-link "Loading" "components.loading"}}
     {{/mdl-navigation}}
   {{/mdl-layout-drawer}}
 
   {{#mdl-layout-content}}
+    <div class="content-container">
     {{outlet}}
+    </div>
   {{/mdl-layout-content}}
 
 {{/mdl-layout}}

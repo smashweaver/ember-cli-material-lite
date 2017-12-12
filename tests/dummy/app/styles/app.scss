@@ -1,6 +1,54 @@
-@import "_color-definitions";
-
-$color-primary: $palette-blue-grey-500;
-$color-accent: $palette-red-500;
-
 @import "material-design-lite";
+
+.demo-group {
+  margin-bottom: 50px;
+  background-color: #f3f2f2;
+
+  &__title {
+    color: #6b6b6b;
+    padding: 10px;
+  }
+
+  &__row {
+    display: table-row;
+  }
+
+  &__component {
+    display: table-cell;
+    padding: 0 40px;
+  }
+
+  &__snippet {
+    margin-top: 30px;
+    padding: 1px;
+
+    pre {
+      margin: 0 0 1px 0;
+    }
+  }
+}
+
+.mdl-layout__header {
+  background-color: #C2185B;
+}
+
+.mdl-navigation__link {
+  &.active {
+    font-weight: 600;
+    color: #000 !important;
+  }
+}
+
+.is-small-screen {
+  .content-container {
+    margin-top: 50px;
+  }
+}
+
+.content-container {
+  padding: 10px;
+}
+
+a {
+  color: #000;
+}
