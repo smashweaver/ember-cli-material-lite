@@ -17,14 +17,6 @@ export default Component.extend({
     'hasFixedDrawer:mdl-layout--fixed-drawer'
   ],
 
-  hasFixedDrawer: false,
-
-  hasFixedHeader: false,
-
-  hasNoDesktopDrawerButton: false,
-
-  hasNoDrawerButton: false,
-
   didInsertElement() {
     let mdl = new window.MaterialLayout(this.element);
     set(this, '_mdlComponent', mdl);

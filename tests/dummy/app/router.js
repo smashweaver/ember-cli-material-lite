@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('components', function() {
     this.route('buttons');
     this.route('loading');
+    this.route('menus');
   });
 });
 

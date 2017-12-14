@@ -1,14 +1,14 @@
 import Component from '@ember/component';
 import layout from '../templates/components/mdl-button';
 import RippleSupport from '../mixins/ripple-support';
-import { set, setProperties } from '@ember/object';
+import { get, set, setProperties } from '@ember/object';
 import { or } from '@ember/object/computed';
 
 export default Component.extend(RippleSupport, {
   layout,
 
   tagName: 'button',
-  
+
   classNames: [
     'mdl-button',
     'mdl-js-button'
@@ -43,7 +43,10 @@ export default Component.extend(RippleSupport, {
     let mdl = new window.MaterialButton(this.element);
     set(this, '__mdlComponent', mdl);
 
-    this.initRipple();
+    if (get(this, '__p.isRipple')) {
+      let mdlRipple = new window.MaterialRipple(this.element);
+      set(this, '__mdlRipple', mdlRipple);
+    }
   },
 
   didReceiveAttrs() {
@@ -58,7 +61,7 @@ export default Component.extend(RippleSupport, {
     let { isAccent, isButtonIcon, isColored, isIcon, isRaised, isFab, isFabMini, isDisabled, isFor, isRipple, __p } = this;
     isFab = isFabMini ? isFabMini : isFab;
     isColored = isAccent ? isAccent : isColored;
-    setProperties(__p, { 
+    setProperties(__p, {
       isAccent,
       isButtonIcon,
       isColored,
