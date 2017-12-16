@@ -1,6 +1,6 @@
 import Component from '@ember/component';
-import layout from '../templates/components/mdl-menu-item';
 import RippleSupport from '../mixins/ripple-support';
+import layout from '../templates/components/mdl-menu-item';
 import { or } from '@ember/object/computed';
 import { scheduleOnce } from '@ember/runloop';
 

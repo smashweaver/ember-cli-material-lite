@@ -11,6 +11,7 @@ Router.map(function() {
     this.route('buttons');
     this.route('loading');
     this.route('menus');
+    this.route('toggles');
   });
 });
 

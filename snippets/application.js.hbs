@@ -1,0 +1,11 @@
+{{!-- app/routes/application.js --}}
+import Route from '@ember/routing/route';
+import { debug } from '@ember/debug';
+
+export default Route.extend({
+  actions: {
+    someAction(key, value) {
+     debug(`${key}: ${value}`);
+    }
+  }
+});

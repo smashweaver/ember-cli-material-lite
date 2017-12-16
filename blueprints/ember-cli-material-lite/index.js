@@ -6,7 +6,8 @@ module.exports = {
     return this.addAddonsToProject({
       packages: [
         { name: 'ember-cli-sass' },
-        { name: 'ember-cli-material-icons' }
+        { name: 'ember-cli-material-icons' },
+        { name: 'ember-truth-helpers '}
       ]
     })
     .then(() => {

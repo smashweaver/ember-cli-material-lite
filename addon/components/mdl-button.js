@@ -1,6 +1,6 @@
 import Component from '@ember/component';
-import layout from '../templates/components/mdl-button';
 import RippleSupport from '../mixins/ripple-support';
+import layout from '../templates/components/mdl-button';
 import { get, set, setProperties } from '@ember/object';
 import { or } from '@ember/object/computed';
 
@@ -17,23 +17,16 @@ export default Component.extend(RippleSupport, {
   attributeBindings: ['disabled', 'for'],
 
   classNameBindings: [
-    '__p.isAccent:mdl-button--accent',
-    '__p.isButtonIcon:mdl-button--icon',
-    '__p.isColored:mdl-button--colored',
-    '__p.isRaised:mdl-button--raised',
-    '__p.isFab:mdl-button--fab',
-    '__p.isFabMini:mdl-button--mini-fab',
-    '__p.isIcon:mdl-button--icon'
+    'isAccent:mdl-button--accent',
+    'isButtonIcon:mdl-button--icon',
+    'isColored:mdl-button--colored',
+    'isRaised:mdl-button--raised',
+    'isFab:mdl-button--fab',
+    'isFabMini:mdl-button--mini-fab',
+    'isIcon:mdl-button--icon'
   ],
 
-  disabled: or('__p.isDisabled'),
-
-  for: or('__p.isFor'),
-
-  init() {
-    this._super(...arguments);
-    set(this, '__p', {});
-  },
+  disabled: or('isDisabled'),
 
   click() {
     this.sendAction();
@@ -43,35 +36,18 @@ export default Component.extend(RippleSupport, {
     let mdl = new window.MaterialButton(this.element);
     set(this, '__mdlComponent', mdl);
 
-    if (get(this, '__p.isRipple')) {
-      let mdlRipple = new window.MaterialRipple(this.element);
-      set(this, '__mdlRipple', mdlRipple);
+    if (get(this, 'isRipple')) {
+      this.initRipple(this.element);
     }
   },
 
   didReceiveAttrs() {
-    this._initParams();
-  },
-
-  didUpdateAttrs() {
-    this._initParams();
-  },
-
-  _initParams() {
-    let { isAccent, isButtonIcon, isColored, isIcon, isRaised, isFab, isFabMini, isDisabled, isFor, isRipple, __p } = this;
+    let { isAccent, isColored, isFab, isFabMini } = this;
     isFab = isFabMini ? isFabMini : isFab;
     isColored = isAccent ? isAccent : isColored;
-    setProperties(__p, {
-      isAccent,
-      isButtonIcon,
-      isColored,
-      isIcon,
-      isRaised,
+    setProperties(this, {
       isFab,
-      isFabMini,
-      isDisabled,
-      isFor,
-      isRipple
+      isColored
     });
   }
 });

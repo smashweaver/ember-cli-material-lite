@@ -40,7 +40,7 @@ module.exports = {
     let host = findHost(this);
     host.import('vendor/componentHandlerShim.js');
     jsFiles.forEach(fileName => host.import(`vendor/mdl/${fileName}`));
-    svgFiles.forEach(fileName => host.import(`vendor/images/${fileName}`, { destDir: 'assets/images' }));
+    svgFiles.forEach(fileName => host.import(`vendor/images/${fileName}`, { destDir: 'images' }));
   },
 
   treeForVendor(vendorTree) {

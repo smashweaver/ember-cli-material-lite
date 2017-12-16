@@ -1,0 +1,62 @@
+<h2>Toggles</h2>
+
+<div class="demo-group">
+  <h5 class="demo-group__title">Checkbox</h5>
+
+  <div class="demo-group__row">
+    <div class="demo-group__component">
+      {{#mdl-checkbox isChecked=fruits.apple update=(action "someAction" "apple")}}Apple{{/mdl-checkbox}}
+    </div>
+
+    <div class="demo-group__component">
+      {{#mdl-checkbox isChecked=fruits.banana update=(action "someAction" "banana")}}Banana{{/mdl-checkbox}}
+    </div>
+
+    <div class="demo-group__component">
+      {{#mdl-checkbox isChecked=fruits.citrus isDisabled=true}}Citrus{{/mdl-checkbox}}
+    </div>
+
+    <div class="demo-group__component">
+      {{#mdl-checkbox isDisabled=true}}Durian{{/mdl-checkbox}}
+    </div>
+  </div>
+
+  <div class="demo-group__snippet">
+    <pre class="hljs mdl-color--yellow-100 mdl-color-text--primary" style="padding:10px">{{actionResult}}</pre>
+    {{code-snippet name="toggle-checkbox-checked.hbs"}}
+    {{code-snippet name="toggle-checkbox.hbs"}}
+    {{code-snippet name="disabled-toggle-checkbox-checked.hbs"}}
+    {{code-snippet name="disabled-toggle-checkbox.hbs"}}
+  </div>
+</div>
+
+<div class="demo-group">
+  <h5 class="demo-group__title">Radio</h5>
+
+  <div class="demo-group__row">
+    <div class="demo-group__component">
+      {{#mdl-radio name="foo" value="first" groupValue=foo update=(action "changeFoo")}}
+        First
+      {{/mdl-radio}}
+    </div>
+
+    <div class="demo-group__component">
+      {{#mdl-radio name="foo" value="second" groupValue=foo update=(action "changeFoo")}}
+        Second
+      {{/mdl-radio}}
+    </div>
+
+    <div class="demo-group__component">
+      {{#mdl-radio name="foo" value="third" isDisabled=true}}
+        Disabled
+      {{/mdl-radio}}
+    </div>
+  </div>
+
+  <div class="demo-group__snippet">
+    <pre class="hljs mdl-color--yellow-100 mdl-color-text--primary" style="padding:10px">{{fooResult}}</pre>
+    {{code-snippet name="toggle-radio-checked.hbs"}}
+    {{code-snippet name="toggle-radio.hbs"}}
+    {{code-snippet name="disabled-toggle-radio.hbs"}}
+  </div>
+</div>
