@@ -1,7 +1,7 @@
 {{!-- bottom-left menu --}}
 {{#mdl-menu isBottomLeft=true}}
-  {{#mdl-menu-item isRipple=true}}Some Action{{/mdl-menu-item}}
-  {{#mdl-menu-item isFullBleedDivider=true}}Another Action{{/mdl-menu-item}}
-  {{#mdl-menu-item isDisabled=true}}Disabled Action{{/mdl-menu-item}}
-  {{#mdl-menu-item}}Yet Another Action{{/mdl-menu-item}}
+  {{#mdl-menu-item action=(action "menuAction" "some action")}}Some Action{{/mdl-menu-item}}
+  {{#mdl-menu-item action=(action "menuAction" "another action") isFullBleedDivider=true}}Another Action{{/mdl-menu-item}}
+  {{#mdl-menu-item action=(action "menuAction" "disabled action") isDisabled=true}}Disabled Action{{/mdl-menu-item}}
+  {{#mdl-menu-item action=(action "menuAction" "yet another action")}}Yet Another Action{{/mdl-menu-item}}
 {{/mdl-menu}}

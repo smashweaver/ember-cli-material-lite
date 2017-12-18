@@ -26,10 +26,10 @@
       <div class="mdl-shadow--2dp container">
         <div class="bar">
           {{#mdl-menu isBottomLeft=true}}
-            {{#mdl-menu-item isRipple=true}}Some Action{{/mdl-menu-item}}
-            {{#mdl-menu-item isFullBleedDivider=true}}Another Action{{/mdl-menu-item}}
-            {{#mdl-menu-item isDisabled=true}}Disabled Action{{/mdl-menu-item}}
-            {{#mdl-menu-item}}Yet Another Action{{/mdl-menu-item}}
+            {{#mdl-menu-item action=(action "menuAction" "some action")}}Some Action{{/mdl-menu-item}}
+            {{#mdl-menu-item action=(action "menuAction" "another action") isFullBleedDivider=true}}Another Action{{/mdl-menu-item}}
+            {{#mdl-menu-item action=(action "menuAction" "disabled action") isDisabled=true}}Disabled Action{{/mdl-menu-item}}
+            {{#mdl-menu-item action=(action "menuAction" "yet another action")}}Yet Another Action{{/mdl-menu-item}}
           {{/mdl-menu}}
         </div>
         <div class="background"></div>
@@ -61,10 +61,10 @@
       <div class="mdl-shadow--2dp container">
         <div class="bar">
           {{#mdl-menu isBottomRight=true class="right"}}
-            {{#mdl-menu-item isRipple=true}}Some Action{{/mdl-menu-item}}
-            {{#mdl-menu-item isFullBleedDivider=true}}Another Action{{/mdl-menu-item}}
-            {{#mdl-menu-item isDisabled=true}}Disabled Action{{/mdl-menu-item}}
-            {{#mdl-menu-item}}Yet Another Action{{/mdl-menu-item}}
+            {{#mdl-menu-item action=(action "menuAction" "some action")}}Some Action{{/mdl-menu-item}}
+            {{#mdl-menu-item action=(action "menuAction" "another action") isFullBleedDivider=true}}Another Action{{/mdl-menu-item}}
+            {{#mdl-menu-item action=(action "menuAction" "disabled action") isDisabled=true}}Disabled Action{{/mdl-menu-item}}
+            {{#mdl-menu-item action=(action "menuAction" "yet another action")}}Yet Another Action{{/mdl-menu-item}}
           {{/mdl-menu}}
         </div>
         <div class="background"></div>
@@ -73,6 +73,9 @@
   </div>
 
   <div class="demo-group__snippet">
+    {{#if actionResult}}
+      <pre class="hljs mdl-color--yellow-100 mdl-color-text--primary" style="padding:10px">Do {{actionResult}}.</pre>
+    {{/if}}
     {{code-snippet name="menu-bottom-left.hbs"}}
     {{code-snippet name="menu-bottom-right.hbs"}}
   </div>
@@ -105,10 +108,10 @@
         <div class="background"></div>
         <div class="bar">
           {{#mdl-menu isTopLeft=true}}
-            {{#mdl-menu-item isRipple=true}}Some Action{{/mdl-menu-item}}
-            {{#mdl-menu-item isFullBleedDivider=true}}Another Action{{/mdl-menu-item}}
-            {{#mdl-menu-item isDisabled=true}}Disabled Action{{/mdl-menu-item}}
-            {{#mdl-menu-item}}Yet Another Action{{/mdl-menu-item}}
+            {{#mdl-menu-item action=(action "otherMenuAction" "some action")}}Some Action{{/mdl-menu-item}}
+            {{#mdl-menu-item action=(action "otherMenuAction" "another action") isFullBleedDivider=true}}Another Action{{/mdl-menu-item}}
+            {{#mdl-menu-item action=(action "otherMenuAction" "disabled action") isDisabled=true}}Disabled Action{{/mdl-menu-item}}
+            {{#mdl-menu-item action=(action "otherMenuAction" "yet another action")}}Yet Another Action{{/mdl-menu-item}}
           {{/mdl-menu}}
         </div>
       </div>
@@ -140,10 +143,10 @@
         <div class="background"></div>
         <div class="bar">
           {{#mdl-menu isTopRight=true class="right"}}
-            {{#mdl-menu-item isRipple=true}}Some Action{{/mdl-menu-item}}
-            {{#mdl-menu-item isFullBleedDivider=true}}Another Action{{/mdl-menu-item}}
-            {{#mdl-menu-item isDisabled=true}}Disabled Action{{/mdl-menu-item}}
-            {{#mdl-menu-item}}Yet Another Action{{/mdl-menu-item}}
+            {{#mdl-menu-item action=(action "otherMenuAction" "some action")}}Some Action{{/mdl-menu-item}}
+            {{#mdl-menu-item action=(action "otherMenuAction" "another action") isFullBleedDivider=true}}Another Action{{/mdl-menu-item}}
+            {{#mdl-menu-item action=(action "otherMenuAction" "disabled action") isDisabled=true}}Disabled Action{{/mdl-menu-item}}
+            {{#mdl-menu-item action=(action "otherMenuAction" "yet another action")}}Yet Another Action{{/mdl-menu-item}}
           {{/mdl-menu}}
         </div>
 
@@ -152,6 +155,9 @@
   </div>
 
   <div class="demo-group__snippet">
+     {{#if otherActionResult}}
+      <pre class="hljs mdl-color--yellow-100 mdl-color-text--primary" style="padding:10px">Do {{otherActionResult}}.</pre>
+    {{/if}}
     {{code-snippet name="menu-top-left.hbs"}}
     {{code-snippet name="menu-top-right.hbs"}}
   </div>
