@@ -5,13 +5,13 @@
 
   <div class="demo-group__row">
     <div class="demo-group__component">
-      {{#mdl-button isColored=true isFab=true}}
+      {{#mdl-button isColored=true isFab=true action=(action "logAction" "the 1st button is clicked")}}
         {{md-icon "add"}}
       {{/mdl-button}}
     </div>
 
     <div class="demo-group__component">
-      {{#mdl-button isColored=true isFab=true isRipple=true}}
+      {{#mdl-button isColored=true isFab=true isRipple=true action=(action "logAction" "the 2nd button is clicked")}}
         {{md-icon "add"}}
       {{/mdl-button}}
     </div>
@@ -19,7 +19,6 @@
 
   <div class="demo-group__snippet">
     {{code-snippet name="colored-fab.hbs"}}
-    {{code-snippet name="colored-fab-with-ripple.hbs"}}
   </div>
 </div>
 
@@ -49,8 +48,6 @@
 
   <div class="demo-group__snippet">
     {{code-snippet name="plain-fab.hbs"}}
-    {{code-snippet name="plain-fab-with-ripple.hbs"}}
-    {{code-snippet name="disabled-plain-fab.hbs"}}
   </div>
 </div>
 
@@ -79,8 +76,6 @@
 
   <div class="demo-group__snippet">
     {{code-snippet name="raised.hbs"}}
-    {{code-snippet name="raised-with-ripple.hbs"}}
-    {{code-snippet name="disabled-raised.hbs"}}
   </div>
 </div>
 
@@ -99,18 +94,10 @@
         Button
       {{/mdl-button}}
     </div>
-
-    <div class="demo-group__component">
-      {{#mdl-button isAccent=true isRaised=true isRipple=true}}
-        Button
-      {{/mdl-button}}
-    </div>
   </div>
 
   <div class="demo-group__snippet">
     {{code-snippet name="colored-raised.hbs"}}
-    {{code-snippet name="accent-colored-raised.hbs"}}
-    {{code-snippet name="accent-colored-raised-with-ripple.hbs"}}
   </div>
 </div>
 
@@ -140,8 +127,6 @@
 
   <div class="demo-group__snippet">
     {{code-snippet name="flat.hbs"}}
-    {{code-snippet name="flat-with-ripple.hbs"}}
-    {{code-snippet name="disabled-flat.hbs"}}
   </div>
 </div>
 
@@ -163,8 +148,7 @@
   </div>
 
   <div class="demo-group__snippet">
-    {{code-snippet name="primary-colored-flat.hbs"}}
-    {{code-snippet name="accent-colored-flat.hbs"}}
+    {{code-snippet name="colored-flat.hbs"}}
   </div>
 </div>
 
@@ -187,7 +171,6 @@
 
   <div class="demo-group__snippet">
     {{code-snippet name="icon.hbs"}}
-    {{code-snippet name="colored-icon.hbs"}}
   </div>
 </div>
 

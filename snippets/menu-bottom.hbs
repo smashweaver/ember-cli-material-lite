@@ -1,0 +1,15 @@
+{{!-- bottom left --}}
+{{#mdl-menu isBottomLeft=true}}
+  {{#mdl-menu-item action=(action "menuAction" "some action")}}Some Action{{/mdl-menu-item}}
+  {{#mdl-menu-item action=(action "menuAction" "another action") isFullBleedDivider=true}}Another Action{{/mdl-menu-item}}
+  {{#mdl-menu-item action=(action "menuAction" "disabled action") isDisabled=true}}Disabled Action{{/mdl-menu-item}}
+  {{#mdl-menu-item action=(action "menuAction" "yet another action")}}Yet Another Action{{/mdl-menu-item}}
+{{/mdl-menu}}
+
+{{!-- bottom right --}}
+{{#mdl-menu isBottomRight=true class="right"}}
+  {{#mdl-menu-item action=(action "menuAction" "some action")}}Some Action{{/mdl-menu-item}}
+  {{#mdl-menu-item action=(action "menuAction" "another action") isFullBleedDivider=true}}Another Action{{/mdl-menu-item}}
+  {{#mdl-menu-item action=(action "menuAction" "disabled action") isDisabled=true}}Disabled Action{{/mdl-menu-item}}
+  {{#mdl-menu-item action=(action "menuAction" "yet another action")}}Yet Another Action{{/mdl-menu-item}}
+{{/mdl-menu}}

@@ -1,0 +1,52 @@
+<h2>Text Fields</h2>
+
+<div class="demo-group">
+  <h5 class="demo-group__title">Simple</h5>
+
+  <div class="demo-group__row">
+    <div class="demo-group__component">
+      {{mdl-textfield "Text..." value=textValue update=(action "updatedTextValue")}}
+    </div>
+
+    <div class="demo-group__component">
+      {{mdl-textfield "Number..." value=numberValue isNumeric=true update=(action "updatedNumberValue")}}
+    </div>
+  </div>
+
+  <div class="demo-group__snippet">
+    <pre class="hljs mdl-color--yellow-100 mdl-color-text--primary u-padding-10">{{inputResult}}</pre>
+    {{code-snippet name="simple-textfields.hbs"}}
+  </div>
+</div>
+
+<div class="demo-group">
+  <h5 class="demo-group__title">Floating label</h5>
+
+  <div class="demo-group__row">
+    <div class="demo-group__component">
+      {{mdl-textfield "Text..." value=someValue isError=(or isSomeError) isFloatingLabel=true update=(action (mut someValue))}}
+    </div>
+
+    <div class="demo-group__component">
+      {{mdl-textfield "Number..." value=someNumberValue isNumeric=true isFloatingLabel=true update=(action (mut someNumberValue))}}
+    </div>
+  </div>
+
+  <div class="demo-group__snippet">
+    {{code-snippet name="floating-label-textfields.hbs"}}
+  </div>
+</div>
+
+<div class="demo-group">
+  <h5 class="demo-group__title">Expandable</h5>
+
+  <div class="demo-group__row">
+    <div class="demo-group__component">
+      {{mdl-textfield "search" isExpandable=true}}
+    </div>
+  </div>
+
+  <div class="demo-group__snippet">
+    {{code-snippet name="expandable-textfields.hbs"}}
+  </div>
+</div>

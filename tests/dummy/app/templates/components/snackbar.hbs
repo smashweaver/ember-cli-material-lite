@@ -1,0 +1,25 @@
+<h2>Snackbar</h2>
+
+<div class="demo-group">
+  <h5 class="demo-group__title"></h5>
+
+  <div class="demo-group__row">
+    <div class="demo-group__component" style="position:relative">
+      {{#mdl-button isRaised=true action=(action "showMessageWithAction") class="snackbar-button"}}
+        Show message with action
+      {{/mdl-button}}
+    </div>
+
+    <div class="demo-group__component" style="position:relative">
+      {{#mdl-button isRaised=true action=(action "showMessage")}}
+        Show message only
+      {{/mdl-button}}
+    </div>
+  </div>
+
+  <div class="demo-group__snippet">
+    {{code-snippet name="snackbar.hbs"}}
+  </div>
+</div>
+
+{{mdl-snackbar}}

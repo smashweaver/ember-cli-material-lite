@@ -1,4 +1,9 @@
 {{!-- colored fab button--}}
-{{#mdl-button isColored=true isFab=true}}
+{{#mdl-button isColored=true isFab=true action=(action "logAction" "the 1st button is clicked")}}
+  {{md-icon "add"}}
+{{/mdl-button}}
+
+{{!-- colored fab button with ripple --}}
+{{#mdl-button isColored=true isFab=true isRipple=true action=(action "logAction" "the 2nd button is clicked")}}
   {{md-icon "add"}}
 {{/mdl-button}}

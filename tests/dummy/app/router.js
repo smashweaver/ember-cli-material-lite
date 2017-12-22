@@ -11,8 +11,11 @@ Router.map(function() {
     this.route('buttons');
     this.route('loading');
     this.route('menus');
+    this.route('snackbar');
     this.route('toggles');
+    this.route('text-fields');
   });
+
 });
 
 export default Router;

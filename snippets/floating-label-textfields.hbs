@@ -1,0 +1,13 @@
+{{!-- text --}}
+{{mdl-textfield "Text..."
+    value=someValue
+    isError=(or isSomeError)
+    isFloatingLabel=true
+    update=(action (mut someValue))}}
+
+{{!-- numeric --}}
+{{mdl-textfield "Number..."
+    value=someNumberValue
+    isNumeric=true
+    isFloatingLabel=true
+    update=(action (mut someNumberValue))}}

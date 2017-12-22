@@ -1,0 +1,19 @@
+{{!-- checked --}}
+{{#mdl-checkbox isChecked=fruits.apple update=(action "someAction" "apple")}}
+  Apple
+{{/mdl-checkbox}}
+
+{{!-- unchecked --}}
+{{#mdl-checkbox isChecked=fruits.banana update=(action "someAction" "banana")}}
+  Banana
+{{/mdl-checkbox}}
+
+{{!-- disabled checked --}}
+{{#mdl-checkbox isChecked=fruits.citrus isDisabled=true}}
+  Citrus
+{{/mdl-checkbox}}
+
+{{!-- disabled --}}
+{{#mdl-checkbox isChecked=fruits.durian isDisabled=true}}
+  Durian
+{{/mdl-checkbox}}
