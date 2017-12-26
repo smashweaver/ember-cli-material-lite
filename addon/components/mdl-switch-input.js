@@ -1,5 +1,5 @@
 import Component from '@ember/component';
-import layout from '../templates/components/mdl-checkbox-input';
+import layout from '../templates/components/mdl-switch-input';
 import { get } from '@ember/object';
 import { or } from '@ember/object/computed';
 
@@ -8,7 +8,7 @@ export default Component.extend({
 
   attributeBindings: ['id', 'checked', 'type', 'disabled'],
 
-  classNames: ['mdl-checkbox__input'],
+  classNames: ['mdl-switch__input'],
 
   tagName: 'input',
 

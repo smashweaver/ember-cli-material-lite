@@ -1,10 +1,10 @@
 {{!-- checked --}}
-{{#mdl-radio name="foo" value="first" groupValue=foo update=(action "changeFoo")}}
+{{#mdl-radio name="foo" value="first" groupValue=foo update=(action "radioAction")}}
   First
 {{/mdl-radio}}
 
 {{!-- unchecked --}}
-{{#mdl-radio name="foo" value="second" groupValue=foo update=(action "changeFoo")}}
+{{#mdl-radio name="foo" value="second" groupValue=foo update=(action "radioAction")}}
   Second
 {{/mdl-radio}}
 
@@ -12,3 +12,11 @@
 {{#mdl-radio name="foo" value="third" isDisabled=true}}
   Disabled
 {{/mdl-radio}}
+
+{{!-- radioAction --}}
+actions: {
+  radioAction(value) {
+    set(this, 'foo', value);
+    this.notifyPropertyChange('radioResult');
+  }
+}

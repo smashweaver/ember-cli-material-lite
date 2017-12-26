@@ -1,0 +1,17 @@
+{{!-- on --}}
+{{mdl-switch isChecked=switches.first update=(action "switchAction" "first")}}
+
+{{!-- off --}}
+{{mdl-switch isChecked=switches.second update=(action "switchAction" "second")}}
+
+{{!-- disabled --}}
+{{mdl-switch isDisabled=true}}
+
+{{!-- switchAction --}}
+actions: {
+  switchAction(key, value) {
+    let switches = get(this, 'switches');
+    set(switches, key, value);
+    this.notifyPropertyChange('switchResult');
+  }
+}

@@ -1,19 +1,23 @@
 {{!-- checked --}}
-{{#mdl-checkbox isChecked=fruits.apple update=(action "someAction" "apple")}}
+{{#mdl-checkbox isChecked=fruits.apple update=(action "checkboxAction" "apple")}}
   Apple
 {{/mdl-checkbox}}
 
 {{!-- unchecked --}}
-{{#mdl-checkbox isChecked=fruits.banana update=(action "someAction" "banana")}}
+{{#mdl-checkbox isChecked=fruits.banana update=(action "checkboxAction" "banana")}}
   Banana
 {{/mdl-checkbox}}
 
-{{!-- disabled checked --}}
-{{#mdl-checkbox isChecked=fruits.citrus isDisabled=true}}
+{{!-- checked --}}
+{{#mdl-checkbox isDisabled=true}}
   Citrus
 {{/mdl-checkbox}}
 
-{{!-- disabled --}}
-{{#mdl-checkbox isChecked=fruits.durian isDisabled=true}}
-  Durian
-{{/mdl-checkbox}}
+{{!-- checkboxAction --}}
+actions: {
+  checkboxAction(key, value) {
+    let fruits = get(this, 'fruits');
+    set(fruits, key, value);
+    this.notifyPropertyChange('checkboxResult');
+  }
+}
