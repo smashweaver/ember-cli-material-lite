@@ -1,0 +1,34 @@
+{{!-- tabs --}}
+{{#mdl-tabs}}
+  {{#mdl-tabs-tab-bar}}
+    {{#mdl-tabs-tab panel="#starks-panel" isActive=true}}Starks{{/mdl-tabs-tab}}
+    {{#mdl-tabs-tab panel="#lannisters-panel"}}Lannisters{{/mdl-tabs-tab}}
+    {{#mdl-tabs-tab panel="#targaryens-panel"}}Targaryens{{/mdl-tabs-tab}}
+  {{/mdl-tabs-tab-bar}}
+
+  {{#mdl-tabs-panel id="starks-panel" isActive=true}}
+    <ul class="mdl-list">
+      <li>Eddard</li>
+      <li>Catelyn</li>
+      <li>Robb</li>
+      <li>Sansa</li>
+      <li>Brandon</li>
+      <li>Arya</li>
+      <li>Rickon</li>
+    </ul>
+  {{/mdl-tabs-panel}}
+  {{#mdl-tabs-panel id="lannisters-panel"}}
+    <ul class="mdl-list">
+      <li>Tywin</li>
+      <li>Cersei</li>
+      <li>Jamie</li>
+      <li>Tyrion</li>
+    </ul>
+  {{/mdl-tabs-panel}}
+  {{#mdl-tabs-panel  id="targaryens-panel"}}
+    <ul class="mdl-list">
+      <li>Viserys</li>
+      <li>Daenerys</li>
+    </ul>
+  {{/mdl-tabs-panel}}
+{{/mdl-tabs}}

@@ -1,0 +1,37 @@
+{{!-- tranparent header ---}}
+{{#mdl-layout class="demo-layout-transparent"}}
+  {{#mdl-layout-header isTransparent=true}}
+    {{#mdl-layout-header-row}}
+      <!-- Title -->
+      {{#mdl-layout-title}}Title{{/mdl-layout-title}}
+      <!-- Add spacer, to align navigation to the right -->
+      {{mdl-layout-spacer}}
+      <!-- Navigation -->
+      {{#mdl-navigation}}
+        {{mdl-navigation-link "Link" "index"}}
+        {{mdl-navigation-link "Link" "index"}}
+        {{mdl-navigation-link "Link" "index"}}
+      {{/mdl-navigation}}
+    {{/mdl-layout-header-row}}
+  {{/mdl-layout-header}}
+
+  {{#mdl-layout-drawer}}
+    {{#mdl-layout-title}}Title{{/mdl-layout-title}}
+    {{#mdl-navigation}}
+      {{mdl-navigation-link "Link" "index"}}
+      {{mdl-navigation-link "Link" "index"}}
+      {{mdl-navigation-link "Link" "index"}}
+    {{/mdl-navigation}}
+  {{/mdl-layout-drawer}}
+
+  {{#mdl-layout-content}}{{/mdl-layout-content}}
+{{/mdl-layout}}
+
+{{!-- css --}}
+.demo-layout-transparent {
+  background: url('/assets/images/transparent.jpg') center / cover;
+}
+
+.demo-layout-transparent .mdl-layout__drawer-button {
+  color: white;
+}

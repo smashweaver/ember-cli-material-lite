@@ -1,0 +1,35 @@
+{{!-- scrolling header --}}
+ {{#mdl-layout class="demo-layout"}}
+  {{#mdl-layout-header isScroll=true}}
+    {{#mdl-layout-header-row}}
+      <!-- Title -->
+      {{#mdl-layout-title}}Title{{/mdl-layout-title}}
+      <!-- Add spacer, to align navigation to the right -->
+      {{mdl-layout-spacer}}
+      <!-- Navigation -->
+      {{#mdl-navigation}}
+        {{mdl-navigation-link "Link" "index"}}
+        {{mdl-navigation-link "Link" "index"}}
+        {{mdl-navigation-link "Link" "index"}}
+      {{/mdl-navigation}}
+    {{/mdl-layout-header-row}}
+  {{/mdl-layout-header}}
+
+  {{#mdl-layout-drawer}}
+    {{#mdl-layout-title}}Title{{/mdl-layout-title}}
+    {{#mdl-navigation}}
+      {{mdl-navigation-link "Link" "index"}}
+      {{mdl-navigation-link "Link" "index"}}
+      {{mdl-navigation-link "Link" "index"}}
+    {{/mdl-navigation}}
+  {{/mdl-layout-drawer}}
+
+  {{#mdl-layout-content}}
+     <div class="content-container scroll"></div>
+  {{/mdl-layout-content}}
+{{/mdl-layout}}
+
+{{!-- css --}}
+.content-container.scroll {
+  height: 600px;
+}

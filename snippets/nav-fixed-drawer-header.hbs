@@ -1,0 +1,28 @@
+{{!-- fixed drawer and header --}}
+{{#mdl-layout class="demo-layout" hasFixedHeader=true hasFixedDrawer=true}}
+  {{#mdl-layout-header}}
+    {{#mdl-layout-header-row}}
+      <!-- Title -->
+      {{#mdl-layout-title}}Title{{/mdl-layout-title}}
+      <!-- Add spacer, to align navigation to the right -->
+      {{mdl-layout-spacer}}
+      <!-- Navigation -->
+      {{#mdl-navigation}}
+        {{mdl-navigation-link "Link" "index"}}
+        {{mdl-navigation-link "Link" "index"}}
+        {{mdl-navigation-link "Link" "index"}}
+      {{/mdl-navigation}}
+    {{/mdl-layout-header-row}}
+  {{/mdl-layout-header}}
+
+  {{#mdl-layout-drawer}}
+    {{#mdl-layout-title}}Title{{/mdl-layout-title}}
+    {{#mdl-navigation}}
+      {{mdl-navigation-link "Link" "index"}}
+      {{mdl-navigation-link "Link" "index"}}
+      {{mdl-navigation-link "Link" "index"}}
+    {{/mdl-navigation}}
+  {{/mdl-layout-drawer}}
+
+  {{#mdl-layout-content}}{{/mdl-layout-content}}
+{{/mdl-layout}}

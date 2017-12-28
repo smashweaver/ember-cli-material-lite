@@ -1,0 +1,32 @@
+{{!-- fixed tabs --}}
+{{#mdl-layout class="demo-layout" hasFixedHeader=true hasFixedTabs=true}}
+  {{#mdl-layout-header}}
+    {{#mdl-layout-header-row}}
+      <!-- Title -->
+      {{#mdl-layout-title}}Title{{/mdl-layout-title}}
+    {{/mdl-layout-header-row}}
+
+    <!-- Tabs -->
+    {{#mdl-layout-tab-bar}}
+      {{#mdl-layout-tab panel="#scroll-tab-1" isActive=true}}Tab1{{/mdl-layout-tab}}
+      {{#mdl-layout-tab panel="#scroll-tab-2"}}Tab 2{{/mdl-layout-tab}}
+      {{#mdl-layout-tab panel="#scroll-tab-3"}}Tab 3{{/mdl-layout-tab}}
+    {{/mdl-layout-tab-bar}}
+  {{/mdl-layout-header}}
+
+  {{#mdl-layout-drawer}}
+    {{#mdl-layout-title}}Title{{/mdl-layout-title}}
+  {{/mdl-layout-drawer}}
+
+  {{#mdl-layout-content}}
+    {{#mdl-layout-tab-panel isActive=true id="scroll-tab-1"}}
+      <div class="content-container">tab 1</div>
+    {{/mdl-layout-tab-panel}}
+    {{#mdl-layout-tab-panel id="scroll-tab-2"}}
+      <div class="content-container">tab 2</div>
+    {{/mdl-layout-tab-panel}}
+    {{#mdl-layout-tab-panel id="scroll-tab-3"}}
+      <div class="content-container">tab 3</div>
+    {{/mdl-layout-tab-panel}}
+  {{/mdl-layout-content}}
+{{/mdl-layout}}

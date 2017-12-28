@@ -1,0 +1,18 @@
+{{!-- fixed drawer, no header --}}
+{{#mdl-layout class="demo-layout" hasFixedDrawer=true}}
+  {{#mdl-layout-drawer}}
+    {{#mdl-layout-title}}Title{{/mdl-layout-title}}
+    {{#mdl-navigation}}
+      {{mdl-navigation-link "Link" "index"}}
+      {{mdl-navigation-link "Link" "index"}}
+      {{mdl-navigation-link "Link" "index"}}
+    {{/mdl-navigation}}
+  {{/mdl-layout-drawer}}
+
+  {{#mdl-layout-content}}{{/mdl-layout-content}}
+{{/mdl-layout}}
+
+{{!-- css --}}
+.demo-layout {
+  background-color: white;
+}

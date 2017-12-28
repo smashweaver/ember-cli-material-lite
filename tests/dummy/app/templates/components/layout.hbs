@@ -1,0 +1,392 @@
+<h2>Navigation</h2>
+
+<style scoped>
+  .demo-layout-transparent {
+    background: url('/assets/images/transparent.jpg') center / cover;
+  }
+  .demo-layout-transparent .mdl-layout__drawer-button {
+    color: white;
+  }
+  .demo-layout {
+    background-color: white;
+  }
+  .content-container.scroll {
+    height: 600px;
+  }
+  .demo-group.waterfall .mdl-navigation__link:last-of-type  {
+    padding-right: 0;
+  }
+</style>
+
+<div class="demo-group">
+  <h5 class="demo-group__title">Layout with transparent header</h5>
+  <div class="demo-group__layout">
+    <div class="demo-group__layout-container" >
+      {{#mdl-layout class="demo-layout-transparent"}}
+        {{#mdl-layout-header isTransparent=true}}
+          {{#mdl-layout-header-row}}
+            <!-- Title -->
+            {{#mdl-layout-title}}Title{{/mdl-layout-title}}
+            <!-- Add spacer, to align navigation to the right -->
+            {{mdl-layout-spacer}}
+            <!-- Navigation -->
+            {{#mdl-navigation}}
+              {{mdl-navigation-link "Link" "index"}}
+              {{mdl-navigation-link "Link" "index"}}
+              {{mdl-navigation-link "Link" "index"}}
+            {{/mdl-navigation}}
+          {{/mdl-layout-header-row}}
+        {{/mdl-layout-header}}
+
+        {{#mdl-layout-drawer}}
+          {{#mdl-layout-title}}Title{{/mdl-layout-title}}
+          {{#mdl-navigation}}
+            {{mdl-navigation-link "Link" "index"}}
+            {{mdl-navigation-link "Link" "index"}}
+            {{mdl-navigation-link "Link" "index"}}
+          {{/mdl-navigation}}
+        {{/mdl-layout-drawer}}
+
+        {{#mdl-layout-content}}{{/mdl-layout-content}}
+      {{/mdl-layout}}
+    </div>
+  </div>
+
+  <div class="demo-group__snippet ">
+    {{code-snippet name="nav-transparent-header.hbs"}}
+  </div>
+</div>
+
+<div class="demo-group">
+  <h5 class="demo-group__title">Layout with fixed drawer, no header</h5>
+  <div class="demo-group__layout" >
+    <div class="demo-group__layout-container">
+      {{#mdl-layout class="demo-layout" hasFixedDrawer=true}}
+        {{#mdl-layout-drawer}}
+          {{#mdl-layout-title}}Title{{/mdl-layout-title}}
+          {{#mdl-navigation}}
+            {{mdl-navigation-link "Link" "index"}}
+            {{mdl-navigation-link "Link" "index"}}
+            {{mdl-navigation-link "Link" "index"}}
+          {{/mdl-navigation}}
+        {{/mdl-layout-drawer}}
+
+        {{#mdl-layout-content}}{{/mdl-layout-content}}
+      {{/mdl-layout}}
+    </div>
+  </div>
+
+  <div class="demo-group__snippet layout">
+    {{code-snippet name="nav-fixed-drawer-no-header.hbs"}}
+  </div>
+</div>
+
+<div class="demo-group">
+  <h5 class="demo-group__title">Layout with fixed header</h5>
+  <div class="demo-group__layout" >
+    <div class="demo-group__layout-container">
+      {{#mdl-layout class="demo-layout" hasFixedHeader=true}}
+        {{#mdl-layout-header}}
+          {{#mdl-layout-header-row}}
+            <!-- Title -->
+            {{#mdl-layout-title}}Title{{/mdl-layout-title}}
+            <!-- Add spacer, to align navigation to the right -->
+            {{mdl-layout-spacer}}
+            <!-- Navigation -->
+            {{#mdl-navigation}}
+              {{mdl-navigation-link "Link" "index"}}
+              {{mdl-navigation-link "Link" "index"}}
+              {{mdl-navigation-link "Link" "index"}}
+            {{/mdl-navigation}}
+          {{/mdl-layout-header-row}}
+        {{/mdl-layout-header}}
+
+        {{#mdl-layout-drawer}}
+          {{#mdl-layout-title}}Title{{/mdl-layout-title}}
+          {{#mdl-navigation}}
+            {{mdl-navigation-link "Link" "index"}}
+            {{mdl-navigation-link "Link" "index"}}
+            {{mdl-navigation-link "Link" "index"}}
+          {{/mdl-navigation}}
+        {{/mdl-layout-drawer}}
+
+        {{#mdl-layout-content}}{{/mdl-layout-content}}
+      {{/mdl-layout}}
+    </div>
+  </div>
+
+  <div class="demo-group__snippet">
+    {{code-snippet name="nav-fixed-header.hbs"}}
+  </div>
+</div>
+
+<div class="demo-group">
+  <h5 class="demo-group__title">Layout with fixed header and drawer</h5>
+  <div class="demo-group__layout" >
+    <div class="demo-group__layout-container">
+      {{#mdl-layout class="demo-layout" hasFixedHeader=true hasFixedDrawer=true}}
+        {{#mdl-layout-header}}
+          {{#mdl-layout-header-row}}
+            <!-- Title -->
+            {{#mdl-layout-title}}Title{{/mdl-layout-title}}
+            <!-- Add spacer, to align navigation to the right -->
+            {{mdl-layout-spacer}}
+            <!-- Navigation -->
+            {{#mdl-navigation}}
+              {{mdl-navigation-link "Link" "index"}}
+              {{mdl-navigation-link "Link" "index"}}
+              {{mdl-navigation-link "Link" "index"}}
+            {{/mdl-navigation}}
+          {{/mdl-layout-header-row}}
+        {{/mdl-layout-header}}
+
+        {{#mdl-layout-drawer}}
+          {{#mdl-layout-title}}Title{{/mdl-layout-title}}
+          {{#mdl-navigation}}
+            {{mdl-navigation-link "Link" "index"}}
+            {{mdl-navigation-link "Link" "index"}}
+            {{mdl-navigation-link "Link" "index"}}
+          {{/mdl-navigation}}
+        {{/mdl-layout-drawer}}
+
+        {{#mdl-layout-content}}{{/mdl-layout-content}}
+      {{/mdl-layout}}
+    </div>
+  </div>
+
+  <div class="demo-group__snippet">
+    {{code-snippet name="nav-fixed-drawer-header.hbs"}}
+  </div>
+</div>
+
+<div class="demo-group">
+  <h5 class="demo-group__title">Layout with scrolling header</h5>
+  <div class="demo-group__layout" >
+    <div class="demo-group__layout-container">
+      {{#mdl-layout class="demo-layout"}}
+        {{#mdl-layout-header isScroll=true}}
+          {{#mdl-layout-header-row}}
+            <!-- Title -->
+            {{#mdl-layout-title}}Title{{/mdl-layout-title}}
+            <!-- Add spacer, to align navigation to the right -->
+            {{mdl-layout-spacer}}
+            <!-- Navigation -->
+            {{#mdl-navigation}}
+              {{mdl-navigation-link "Link" "index"}}
+              {{mdl-navigation-link "Link" "index"}}
+              {{mdl-navigation-link "Link" "index"}}
+            {{/mdl-navigation}}
+          {{/mdl-layout-header-row}}
+        {{/mdl-layout-header}}
+
+        {{#mdl-layout-drawer}}
+          {{#mdl-layout-title}}Title{{/mdl-layout-title}}
+          {{#mdl-navigation}}
+            {{mdl-navigation-link "Link" "index"}}
+            {{mdl-navigation-link "Link" "index"}}
+            {{mdl-navigation-link "Link" "index"}}
+          {{/mdl-navigation}}
+        {{/mdl-layout-drawer}}
+
+        {{#mdl-layout-content}}
+           <div class="content-container scroll"></div>
+        {{/mdl-layout-content}}
+      {{/mdl-layout}}
+    </div>
+  </div>
+
+  <div class="demo-group__snippet">
+    {{code-snippet name="nav-scrolling-header.hbs"}}
+  </div>
+</div>
+
+<div class="demo-group waterfall">
+  <h5 class="demo-group__title">Layout with waterfall header</h5>
+  <div class="demo-group__layout" >
+    <div class="demo-group__layout-container">
+      {{#mdl-layout class="demo-layout"}}
+        {{#mdl-layout-header isWaterfall=true}}
+          {{#mdl-layout-header-row}}
+            <!-- Title -->
+            {{#mdl-layout-title}}Title{{/mdl-layout-title}}
+            <!-- Add spacer, to align navigation to the right -->
+            {{mdl-layout-spacer}}
+            <!-- expandable -->
+            {{mdl-textfield "search" isExpandable=true isAlignRight=true}}
+          {{/mdl-layout-header-row}}
+
+          {{#mdl-layout-header-row}}
+            {{mdl-layout-spacer}}
+            <!-- Navigation -->
+            {{#mdl-navigation}}
+              {{mdl-navigation-link "Link" "index"}}
+              {{mdl-navigation-link "Link" "index"}}
+              {{mdl-navigation-link "Link" "index"}}
+            {{/mdl-navigation}}
+          {{/mdl-layout-header-row}}
+        {{/mdl-layout-header}}
+
+        {{#mdl-layout-drawer}}
+          {{#mdl-layout-title}}Title{{/mdl-layout-title}}
+          {{#mdl-navigation}}
+            {{mdl-navigation-link "Link" "index"}}
+            {{mdl-navigation-link "Link" "index"}}
+            {{mdl-navigation-link "Link" "index"}}
+          {{/mdl-navigation}}
+        {{/mdl-layout-drawer}}
+
+        {{#mdl-layout-content}}
+           <div class="content-container scroll"></div>
+        {{/mdl-layout-content}}
+      {{/mdl-layout}}
+    </div>
+  </div>
+
+  <div class="demo-group__snippet">
+    {{code-snippet name="nav-waterfall-header.hbs"}}
+  </div>
+</div>
+
+<div class="demo-group">
+  <h5 class="demo-group__title">Layout with scrolling tabs</h5>
+  <div class="demo-group__layout" >
+    <div class="demo-group__layout-container">
+      {{#mdl-layout class="demo-layout" hasFixedHeader=true}}
+        {{#mdl-layout-header}}
+          {{#mdl-layout-header-row}}
+            <!-- Title -->
+            {{#mdl-layout-title}}Title{{/mdl-layout-title}}
+          {{/mdl-layout-header-row}}
+
+          <!-- Tabs -->
+          {{#mdl-layout-tab-bar}}
+            {{#mdl-layout-tab panel="#scroll-tab-1" isActive=true}}Tab 1{{/mdl-layout-tab}}
+            {{#mdl-layout-tab panel="#scroll-tab-2"}}Tab 2{{/mdl-layout-tab}}
+            {{#mdl-layout-tab panel="#scroll-tab-3"}}Tab 3{{/mdl-layout-tab}}
+            {{#mdl-layout-tab panel="#scroll-tab-4"}}Tab 4{{/mdl-layout-tab}}
+            {{#mdl-layout-tab panel="#scroll-tab-5"}}Tab 5{{/mdl-layout-tab}}
+            {{#mdl-layout-tab panel="#scroll-tab-6"}}Tab 6{{/mdl-layout-tab}}
+          {{/mdl-layout-tab-bar}}
+        {{/mdl-layout-header}}
+
+        {{#mdl-layout-drawer}}
+          {{#mdl-layout-title}}Title{{/mdl-layout-title}}
+        {{/mdl-layout-drawer}}
+
+        {{#mdl-layout-content}}
+          {{#mdl-layout-tab-panel id="scroll-tab-1" isActive=true}}
+            <div class="content-container">tab 1</div>
+          {{/mdl-layout-tab-panel}}
+          {{#mdl-layout-tab-panel id="scroll-tab-2"}}
+            <div class="content-container">tab 2</div>
+          {{/mdl-layout-tab-panel}}
+          {{#mdl-layout-tab-panel id="scroll-tab-3"}}
+            <div class="content-container">tab 3</div>
+          {{/mdl-layout-tab-panel}}
+          {{#mdl-layout-tab-panel id="scroll-tab-4"}}
+            <div class="content-container">tab 4</div>
+          {{/mdl-layout-tab-panel}}
+          {{#mdl-layout-tab-panel id="scroll-tab-5"}}
+            <div class="content-container">tab 5</div>
+          {{/mdl-layout-tab-panel}}
+          {{#mdl-layout-tab-panel id="scroll-tab-6"}}
+            <div class="content-container">tab 6</div>
+          {{/mdl-layout-tab-panel}}
+        {{/mdl-layout-content}}
+      {{/mdl-layout}}
+    </div>
+  </div>
+
+  <div class="demo-group__snippet">
+    {{code-snippet name="nav-scrolling-tabs.hbs"}}
+  </div>
+</div>
+
+<div class="demo-group">
+  <h5 class="demo-group__title">Layout with fixed tabs</h5>
+  <div class="demo-group__layout" >
+    <div class="demo-group__layout-container">
+      {{#mdl-layout class="demo-layout" hasFixedHeader=true hasFixedTabs=true}}
+        {{#mdl-layout-header}}
+          {{#mdl-layout-header-row}}
+            <!-- Title -->
+            {{#mdl-layout-title}}Title{{/mdl-layout-title}}
+          {{/mdl-layout-header-row}}
+
+          <!-- Tabs -->
+          {{#mdl-layout-tab-bar}}
+            {{#mdl-layout-tab panel="#fixed-tab-1" isActive=true}}Tab1{{/mdl-layout-tab}}
+            {{#mdl-layout-tab panel="#fixed-tab-2"}}Tab 2{{/mdl-layout-tab}}
+            {{#mdl-layout-tab panel="#fixed-tab-3"}}Tab 3{{/mdl-layout-tab}}
+          {{/mdl-layout-tab-bar}}
+        {{/mdl-layout-header}}
+
+        {{#mdl-layout-drawer}}
+          {{#mdl-layout-title}}Title{{/mdl-layout-title}}
+        {{/mdl-layout-drawer}}
+
+        {{#mdl-layout-content}}
+          {{#mdl-layout-tab-panel id="fixed-tab-1" isActive=true}}
+            <div class="content-container">tab 1</div>
+          {{/mdl-layout-tab-panel}}
+          {{#mdl-layout-tab-panel id="fixed-tab-2"}}
+            <div class="content-container">tab 2</div>
+          {{/mdl-layout-tab-panel}}
+          {{#mdl-layout-tab-panel id="fixed-tab-3"}}
+            <div class="content-container">tab 3</div>
+          {{/mdl-layout-tab-panel}}
+        {{/mdl-layout-content}}
+      {{/mdl-layout}}
+    </div>
+  </div>
+
+  <div class="demo-group__snippet">
+    {{code-snippet name="nav-fixed-tabs.hbs"}}
+  </div>
+</div>
+
+<h2>Tabs</h2>
+
+<div class="demo-group">
+  <div class="demo-group__row">
+    <div class="demo-group__component">
+      {{#mdl-tabs}}
+        {{#mdl-tabs-tab-bar}}
+          {{#mdl-tabs-tab panel="#starks-panel" isActive=true}}Starks{{/mdl-tabs-tab}}
+          {{#mdl-tabs-tab panel="#lannisters-panel"}}Lannisters{{/mdl-tabs-tab}}
+          {{#mdl-tabs-tab panel="#targaryens-panel"}}Targaryens{{/mdl-tabs-tab}}
+        {{/mdl-tabs-tab-bar}}
+
+        {{#mdl-tabs-panel id="starks-panel" isActive=true}}
+          <ul class="mdl-list">
+            <li>Eddard</li>
+            <li>Catelyn</li>
+            <li>Robb</li>
+            <li>Sansa</li>
+            <li>Brandon</li>
+            <li>Arya</li>
+            <li>Rickon</li>
+          </ul>
+        {{/mdl-tabs-panel}}
+        {{#mdl-tabs-panel id="lannisters-panel"}}
+          <ul class="mdl-list">
+            <li>Tywin</li>
+            <li>Cersei</li>
+            <li>Jamie</li>
+            <li>Tyrion</li>
+          </ul>
+        {{/mdl-tabs-panel}}
+        {{#mdl-tabs-panel  id="targaryens-panel"}}
+          <ul class="mdl-list">
+            <li>Viserys</li>
+            <li>Daenerys</li>
+          </ul>
+        {{/mdl-tabs-panel}}
+      {{/mdl-tabs}}
+    </div>
+  </div>
+
+  <div class="demo-group__snippet">
+    {{code-snippet name="tabs.hbs"}}
+  </div>
+</div>

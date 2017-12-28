@@ -1,28 +1,31 @@
 <h2>Menus</h2>
 
+<style scope>
+  .container {
+    position: relative;
+    width: 200px;
+  }
+  .bar {
+    box-sizing: border-box;
+    background: #3F51B5;
+    color: white;
+    width: 100%;
+    padding: 16px;
+  }
+  .background {
+    background: white;
+    height: 148px;
+    width: 100%;
+  }
+  .bar .right {
+    text-align: right;
+  }
+</style>
+
 <div class="demo-group">
   <h5 class="demo-group__title">Bottom aligned</h5>
-
   <div class="demo-group__row">
     <div class="demo-group__component">
-      <style scope>
-        .container {
-          position: relative;
-          width: 200px;
-        }
-        .bar {
-          box-sizing: border-box;
-          background: #3F51B5;
-          color: white;
-          width: 100%;
-          padding: 16px;
-        }
-        .background {
-          background: white;
-          height: 148px;
-          width: 100%;
-        }
-      </style>
       <div class="mdl-shadow--2dp container">
         <div class="bar">
           {{#mdl-menu isBottomLeft=true}}
@@ -37,27 +40,6 @@
     </div>
 
     <div class="demo-group__component">
-      <style scope>
-        .container {
-          position: relative;
-          width: 200px;
-        }
-        .bar {
-          box-sizing: border-box;
-          background: #3F51B5;
-          color: white;
-          width: 100%;
-          padding: 16px;
-        }
-        .background {
-          background: white;
-          height: 148px;
-          width: 100%;
-        }
-        .bar .right {
-          text-align: right;
-        }
-      </style>
       <div class="mdl-shadow--2dp container">
         <div class="bar">
           {{#mdl-menu isBottomRight=true class="right"}}
@@ -82,27 +64,8 @@
 
 <div class="demo-group">
   <h5 class="demo-group__title">Top aligned</h5>
-
   <div class="demo-group__row">
     <div class="demo-group__component">
-      <style scope>
-        .container {
-          position: relative;
-          width: 200px;
-        }
-        .bar {
-          box-sizing: border-box;
-          background: #3F51B5;
-          color: white;
-          width: 100%;
-          padding: 16px;
-        }
-        .background {
-          background: white;
-          height: 148px;
-          width: 100%;
-        }
-      </style>
       <div class="mdl-shadow--2dp container">
         <div class="background"></div>
         <div class="bar">
@@ -117,27 +80,6 @@
     </div>
 
     <div class="demo-group__component">
-      <style scope>
-        .container {
-          position: relative;
-          width: 200px;
-        }
-        .bar {
-          box-sizing: border-box;
-          background: #3F51B5;
-          color: white;
-          width: 100%;
-          padding: 16px;
-        }
-        .background {
-          background: white;
-          height: 148px;
-          width: 100%;
-        }
-        .bar .right {
-          text-align: right;
-        }
-      </style>
       <div class="mdl-shadow--2dp container">
         <div class="background"></div>
         <div class="bar">
@@ -148,13 +90,12 @@
             {{#mdl-menu-item action=(action "otherMenuAction" "yet another action")}}Yet Another Action{{/mdl-menu-item}}
           {{/mdl-menu}}
         </div>
-
       </div>
     </div>
   </div>
 
   <div class="demo-group__snippet">
-     {{#if otherActionResult}}
+    {{#if otherActionResult}}
       <pre class="hljs mdl-color--yellow-100 mdl-color-text--primary" style="padding:10px">Do {{otherActionResult}}.</pre>
     {{/if}}
     {{code-snippet name="menu-top.hbs"}}

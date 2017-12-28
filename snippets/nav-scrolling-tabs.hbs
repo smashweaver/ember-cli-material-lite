@@ -1,0 +1,44 @@
+{{!-- scrolling tabs --}}
+{{#mdl-layout class="demo-layout" hasFixedHeader=true}}
+  {{#mdl-layout-header}}
+    {{#mdl-layout-header-row}}
+      <!-- Title -->
+      {{#mdl-layout-title}}Title{{/mdl-layout-title}}
+    {{/mdl-layout-header-row}}
+
+    <!-- Tabs -->
+    {{#mdl-layout-tab-bar}}
+      {{#mdl-layout-tab panel="#scroll-tab-1" isActive=true}}Tab 1{{/mdl-layout-tab}}
+      {{#mdl-layout-tab panel="#scroll-tab-2"}}Tab 2{{/mdl-layout-tab}}
+      {{#mdl-layout-tab panel="#scroll-tab-3"}}Tab 3{{/mdl-layout-tab}}
+      {{#mdl-layout-tab panel="#scroll-tab-4"}}Tab 4{{/mdl-layout-tab}}
+      {{#mdl-layout-tab panel="#scroll-tab-5"}}Tab 5{{/mdl-layout-tab}}
+      {{#mdl-layout-tab panel="#scroll-tab-6"}}Tab 6{{/mdl-layout-tab}}
+    {{/mdl-layout-tab-bar}}
+  {{/mdl-layout-header}}
+
+  {{#mdl-layout-drawer}}
+    {{#mdl-layout-title}}Title{{/mdl-layout-title}}
+  {{/mdl-layout-drawer}}
+
+  {{#mdl-layout-content}}
+    {{#mdl-layout-tab-panel id="scroll-tab-1" isActive=true}}
+      <div class="content-container">tab 1</div>
+    {{/mdl-layout-tab-panel}}
+    {{#mdl-layout-tab-panel id="scroll-tab-2"}}
+      <div class="content-container">tab 2</div>
+    {{/mdl-layout-tab-panel}}
+    {{#mdl-layout-tab-panel id="scroll-tab-3"}}
+      <div class="content-container">tab 3</div>
+    {{/mdl-layout-tab-panel}}
+    {{#mdl-layout-tab-panel id="scroll-tab-4"}}
+      <div class="content-container">tab 4</div>
+    {{/mdl-layout-tab-panel}}
+    {{#mdl-layout-tab-panel id="scroll-tab-5"}}
+      <div class="content-container">tab 5</div>
+    {{/mdl-layout-tab-panel}}
+    {{#mdl-layout-tab-panel id="scroll-tab-6"}}
+      <div class="content-container">tab 6</div>
+    {{/mdl-layout-tab-panel}}
+  {{/mdl-layout-content}}
+{{/mdl-layout}}
