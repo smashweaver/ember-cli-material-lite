@@ -1,0 +1,68 @@
+<h2>Badges</h2>
+
+<style>
+.demo-group__component .material-icons {
+  font-size: 32px;
+}
+.dark {
+  width: 100%;
+  padding: 30px 0;
+  background-color: #6f6f6f;
+  color: white;
+}
+.demo-group__snippet.packed {
+  margin-top: 0;
+}
+</style>
+
+<div class="demo-group">
+  <h5 class="demo-group__title">Badge</h5>
+  <div class="demo-group__row">
+    <div class="demo-group__component">
+      {{#mdl-badge "4"}}Inbox{{/mdl-badge}}
+    </div>
+
+    <div class="demo-group__component">
+      {{#mdl-badge "♥"}}Mood{{/mdl-badge}}
+    </div>
+  </div>
+
+  <div class="demo-group__snippet">
+    {{code-snippet name="badge.hbs"}}
+  </div>
+</div>
+
+<div class="demo-group">
+  <h5 class="demo-group__title">Badge on icon</h5>
+  <div class="demo-group__row">
+    <div class="demo-group__component">
+      {{#mdl-badge "1" isIcon=true isOverlap=true}}account_box{{/mdl-badge}}
+    </div>
+
+    <div class="demo-group__component">
+     {{#mdl-badge "♥" isIcon=true isOverlap=true}}account_box{{/mdl-badge}}
+    </div>
+  </div>
+
+  <div class="demo-group__snippet">
+    {{code-snippet name="badge-on-icon.hbs"}}
+  </div>
+</div>
+
+<div class="demo-group">
+  <h5 class="demo-group__title">Badge with no background</h5>
+  <div class="demo-group__row dark">
+    <div class="demo-group__component">
+      {{#mdl-badge "1" isBackground=false}}Inbox{{/mdl-badge}}
+    </div>
+
+    <div class="demo-group__component">
+      {{#mdl-badge "♥" isBackground=false}}Mood{{/mdl-badge}}
+    </div>
+
+  </div>
+
+  <div class="demo-group__snippet packed">
+    {{code-snippet name="badge-no-background.hbs"}}
+  </div>
+</div>

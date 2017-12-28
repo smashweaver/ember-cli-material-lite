@@ -1,0 +1,9 @@
+{{yield}}
+
+<span class="mdl-chip__text">
+  {{text}}
+</span>
+
+{{#if isDeletable}}
+  {{mdl-chip-action action=(action "deleted")}}
+{{/if}}

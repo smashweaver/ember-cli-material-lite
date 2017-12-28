@@ -1,0 +1,7 @@
+{{!-- Deletable basic chip --}}
+{{mdl-chip "Basic Chip" isDeletable=true deleted=(action "logAction" "Delete button was clicked")}}
+
+{{!-- Deletable contact chip --}}
+{{#mdl-chip "Contact Chip" isContact=true isDeletable=true deleted=(action "logAction" "Delete button of contact was clicked")}}
+  {{mdl-chip-contact "/assets/images/user.jpg" isImage=true}}
+{{/mdl-chip}}

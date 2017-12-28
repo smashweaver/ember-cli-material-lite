@@ -8,7 +8,9 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('components', function() {
+    this.route('badges');
     this.route('buttons');
+    this.route('chips');
     this.route('loading');
     this.route('layout');
     this.route('menus');

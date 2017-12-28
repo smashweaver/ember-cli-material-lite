@@ -1,0 +1,59 @@
+<h2>Chips</h2>
+
+<div class="demo-group">
+  <h5 class="demo-group__title">Basic chips</h5>
+  <div class="demo-group__row">
+    <div class="demo-group__component">
+      {{mdl-chip "Basic Chip"}}
+    </div>
+
+    <div class="demo-group__component">
+      {{mdl-chip "Button Chip" isButton=true}}
+    </div>
+  </div>
+
+  <div class="demo-group__snippet">
+    {{code-snippet name="basic-chip.hbs"}}
+  </div>
+</div>
+
+
+<div class="demo-group">
+  <h5 class="demo-group__title">Contact chips</h5>
+  <div class="demo-group__row">
+    <div class="demo-group__component">
+      {{#mdl-chip "Text Contact" isContact=true}}
+        {{mdl-chip-contact "A" class="mdl-color--teal mdl-color-text--white"}}
+      {{/mdl-chip}}
+    </div>
+
+    <div class="demo-group__component">
+      {{#mdl-chip "Image Contact" isContact=true}}
+        {{mdl-chip-contact "/assets/images/user.jpg" isImage=true}}
+      {{/mdl-chip}}
+    </div>
+  </div>
+
+  <div class="demo-group__snippet">
+    {{code-snippet name="contact-chip.hbs"}}
+  </div>
+</div>
+
+<div class="demo-group">
+  <h5 class="demo-group__title">Deletable chips</h5>
+  <div class="demo-group__row">
+    <div class="demo-group__component">
+      {{mdl-chip "Basic Chip" isDeletable=true deleted=(action "logAction" "Delete button was clicked")}}
+    </div>
+
+    <div class="demo-group__component">
+      {{#mdl-chip "Contact Chip" isContact=true isDeletable=true deleted=(action "logAction" "Delete button of contact was clicked")}}
+        {{mdl-chip-contact "/assets/images/user.jpg" isImage=true}}
+      {{/mdl-chip}}
+    </div>
+  </div>
+
+  <div class="demo-group__snippet">
+    {{code-snippet name="deletable-chip.hbs"}}
+  </div>
+</div>
