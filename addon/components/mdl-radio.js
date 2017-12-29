@@ -4,14 +4,15 @@ import layout from '../templates/components/mdl-radio';
 import { computed, get, set } from '@ember/object';
 import { or } from '@ember/object/computed';
 
-export default Component.extend(RippleSupport, {
+const MdlRadio = Component.extend(RippleSupport, {
   layout,
 
   attributeBindings: ['for'],
 
   classNames: [
     'mdl-radio',
-    'mdl-js-radio'
+    'mdl-js-radio',
+    'mdl-js-ripple-effect'
   ],
 
   tagName: 'label',
@@ -47,3 +48,9 @@ export default Component.extend(RippleSupport, {
     }
   }
 });
+
+MdlRadio.reopenClass({
+  positionalParams: ['text']
+});
+
+export default MdlRadio;

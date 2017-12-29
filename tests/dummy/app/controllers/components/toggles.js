@@ -15,6 +15,10 @@ export default Controller.extend({
     return JSON.stringify(get(this, 'switches'),  null, 2);
   }),
 
+  toggleResult: computed(function() {
+    return JSON.stringify(get(this, 'buttons'),  null, 2);
+  }),
+
   init() {
     this._super(...arguments);
     setProperties(this, {
@@ -27,6 +31,10 @@ export default Controller.extend({
       switches: {
         first: true,
         second: false
+      },
+      buttons: {
+        bold: true,
+        italic: false
       }
     });
   },
@@ -47,6 +55,12 @@ export default Controller.extend({
       let switches = get(this, 'switches');
       set(switches, key, value);
       this.notifyPropertyChange('switchResult');
+    },
+
+    toggleAction(key, value) {
+      let buttons = get(this, 'buttons');
+      set(buttons, key, value);
+      this.notifyPropertyChange('toggleResult');
     }
   }
 });

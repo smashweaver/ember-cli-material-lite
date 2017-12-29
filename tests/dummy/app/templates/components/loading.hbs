@@ -1,8 +1,33 @@
 <h2>Loading</h2>
+<style>
+.mdl-progress {
+  width: 200px
+}
+</style>
+
+<div class="demo-group">
+  <h5 class="demo-group__title">Progress</h5>
+  <div class="demo-group__row">
+    <div class="demo-group__component ">
+      {{mdl-progress progress=44}}
+    </div>
+
+     <div class="demo-group__component ">
+      {{mdl-progress isIndeterminate=true}}
+    </div>
+
+     <div class="demo-group__component ">
+      {{mdl-progress progress=33 buffer=87}}
+    </div>
+  </div>
+
+  <div class="demo-group__snippet">
+    {{code-snippet name="progress.hbs"}}
+  </div>
+</div>
 
 <div class="demo-group">
   <h5 class="demo-group__title">Spinner</h5>
-
   <div class="demo-group__row">
     <div class="demo-group__component">
       {{mdl-spinner isActive=true}}

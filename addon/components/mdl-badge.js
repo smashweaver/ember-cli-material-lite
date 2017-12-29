@@ -1,5 +1,6 @@
 import Component from '@ember/component';
 import layout from '../templates/components/mdl-badge';
+import { get } from '@ember/object';
 
 const MdlBadge = Component.extend({
   layout,
@@ -16,11 +17,17 @@ const MdlBadge = Component.extend({
 
   isBackground: true,
 
-  tagName: 'span'
+  tagName: 'span',
+
+  didInsertElement() {
+    if (!get(this, 'hasBlock')) {
+      this.$().text(get(this, 'anchor'));
+    }
+  }
 });
 
 MdlBadge.reopenClass({
-  positionalParams: ['badge']
+  positionalParams: ['badge', 'anchor']
 });
 
 export default MdlBadge;

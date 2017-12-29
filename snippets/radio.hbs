@@ -1,17 +1,11 @@
 {{!-- checked --}}
-{{#mdl-radio name="foo" value="first" groupValue=foo update=(action "radioAction")}}
-  First
-{{/mdl-radio}}
+{{#mdl-radio "First" name="foo" value="first" groupValue=foo update=(action "radioAction")}}
 
 {{!-- unchecked --}}
-{{#mdl-radio name="foo" value="second" groupValue=foo update=(action "radioAction")}}
-  Second
-{{/mdl-radio}}
+{{#mdl-radio "Second" name="foo" value="second" groupValue=foo update=(action "radioAction")}}
 
 {{!-- disabled --}}
-{{#mdl-radio name="foo" value="third" isDisabled=true}}
-  Disabled
-{{/mdl-radio}}
+{{#mdl-radio "Disabled" name="foo" value="third" isDisabled=true}}
 
 {{!-- radioAction --}}
 actions: {

@@ -1,3 +1,3 @@
 {{mdl-checkbox-input id=_checkboxId isDisabled=(or isDisabled) isChecked=(or isChecked) update=(action "update")}}
 
-<span class="mdl-checkbox__label">{{yield}}</span>
+<span class="mdl-checkbox__label">{{#if hasBlock}}{{yield}}{{else}}{{text}}{{/if}}</span>

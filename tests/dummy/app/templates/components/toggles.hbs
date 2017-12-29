@@ -5,11 +5,11 @@
 
   <div class="demo-group__row">
     <div class="demo-group__component">
-      {{#mdl-checkbox isChecked=fruits.apple update=(action "checkboxAction" "apple")}}Apple{{/mdl-checkbox}}
+      {{mdl-checkbox "Apple" isChecked=(or fruits.apple) update=(action "checkboxAction" "apple")}}
     </div>
 
     <div class="demo-group__component">
-      {{#mdl-checkbox isChecked=fruits.banana update=(action "checkboxAction" "banana")}}Banana{{/mdl-checkbox}}
+      {{mdl-checkbox "Banana" isChecked=(or fruits.banana) update=(action "checkboxAction" "banana")}}
     </div>
 
     <div class="demo-group__component">
@@ -28,15 +28,11 @@
 
   <div class="demo-group__row">
     <div class="demo-group__component">
-      {{#mdl-radio name="foo" value="first" groupValue=foo update=(action "radioAction")}}
-        First
-      {{/mdl-radio}}
+      {{mdl-radio "First" name="foo" value="first" groupValue=foo update=(action "radioAction")}}
     </div>
 
     <div class="demo-group__component">
-      {{#mdl-radio name="foo" value="second" groupValue=foo update=(action "radioAction")}}
-        Second
-      {{/mdl-radio}}
+      {{mdl-radio "Second" name="foo" value="second" groupValue=foo update=(action "radioAction")}}
     </div>
 
     <div class="demo-group__component">
@@ -49,6 +45,25 @@
   <div class="demo-group__snippet">
     <pre class="hljs mdl-color--yellow-100 mdl-color-text--primary" style="padding:10px">{{radioResult}}</pre>
     {{code-snippet name="radio.hbs"}}
+  </div>
+</div>
+
+<div class="demo-group">
+  <h5 class="demo-group__title">Icon Toggle</h5>
+
+  <div class="demo-group__row">
+    <div class="demo-group__component">
+      {{mdl-icon-toggle "format_bold" isChecked=true update=(action "toggleAction" "bold")}}
+    </div>
+
+    <div class="demo-group__component">
+      {{#mdl-icon-toggle update=(action "toggleAction" "italic")}}format_italic{{/mdl-icon-toggle}}
+    </div>
+  </div>
+
+  <div class="demo-group__snippet">
+    <pre class="hljs mdl-color--yellow-100 mdl-color-text--primary" style="padding:10px">{{toggleResult}}</pre>
+    {{code-snippet name="icon-toggle.hbs"}}
   </div>
 </div>
 

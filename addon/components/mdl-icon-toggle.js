@@ -1,15 +1,15 @@
 import Component from '@ember/component';
 import RippleSupport from '../mixins/ripple-support';
-import layout from '../templates/components/mdl-checkbox';
+import layout from '../templates/components/mdl-icon-toggle';
 import { computed, get, set } from '@ember/object';
 import { or } from '@ember/object/computed';
 
-const MdlCheckbox = Component.extend(RippleSupport, {
+const MdlIconToggle = Component.extend(RippleSupport, {
   layout,
 
   classNames: [
-    'mdl-checkbox',
-    'mdl-js-checkbox',
+    'mdl-icon-toggle',
+    'mdl-js-icon-toggle',
     'mdl-js-ripple-effect'
   ],
 
@@ -26,11 +26,11 @@ const MdlCheckbox = Component.extend(RippleSupport, {
   }),
 
   didInsertElement() {
-    let mdl = new window.MaterialCheckbox(this.element);
+    let mdl = new window.MaterialIconToggle(this.element);
     set(this, '__mdlComponent', mdl);
 
     if (get(this, 'isRipple')) {
-      let [rippleContainer] = this.$('.mdl-checkbox__ripple-container');
+      let [rippleContainer] = this.$('.mdl-icon-toggle__ripple-container');
       this.initRipple(rippleContainer);
     }
   },
@@ -42,8 +42,8 @@ const MdlCheckbox = Component.extend(RippleSupport, {
   }
 });
 
-MdlCheckbox.reopenClass({
-  positionalParams: ['text']
+MdlIconToggle.reopenClass({
+  positionalParams: ['icon']
 });
 
-export default MdlCheckbox;
+export default MdlIconToggle;
