@@ -4,7 +4,7 @@ import layout from '../templates/components/mdl-button';
 import { get, set, setProperties } from '@ember/object';
 import { or } from '@ember/object/computed';
 
-export default Component.extend(RippleSupport, {
+const MdlButton = Component.extend(RippleSupport, {
   layout,
 
   tagName: 'button',
@@ -51,3 +51,9 @@ export default Component.extend(RippleSupport, {
     });
   }
 });
+
+MdlButton.reopenClass({
+  positionalParams: ['text']
+});
+
+export default MdlButton;

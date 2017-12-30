@@ -1,0 +1,61 @@
+<h2>Tooltip</h2>
+
+<div class="demo-group">
+  <h5 class="demo-group__title">Normal tooltips</h5>
+
+  <div class="demo-group__row">
+    <div class="demo-group__component">
+      {{mdl-button "Button" isRaised=true id="button1"}}
+      {{#mdl-tooltip for="button1"}}This tooltip sits at bottom{{/mdl-tooltip}}
+    </div>
+
+    <div class="demo-group__component">
+      {{mdl-button "Button" isRaised=true id="button2"}}
+      {{#mdl-tooltip isTop=true for="button2"}}This tooltip sits on top{{/mdl-tooltip}}
+    </div>
+
+    <div class="demo-group__component">
+      {{mdl-button "Button" isRaised=true id="button3"}}
+      {{#mdl-tooltip isLeft=true for="button3"}}This tooltip is on the left{{/mdl-tooltip}}
+    </div>
+
+    <div class="demo-group__component">
+      {{mdl-button "Button" isRaised=true id="button4"}}
+      {{#mdl-tooltip isRight=true for="button4"}}This tooltip is on the right{{/mdl-tooltip}}
+    </div>
+  </div>
+
+  <div class="demo-group__snippet">
+    {{code-snippet name="tooltips.hbs"}}
+  </div>
+</div>
+
+<div class="demo-group">
+  <h5 class="demo-group__title">Large tooltips</h5>
+
+  <div class="demo-group__row">
+    <div class="demo-group__component">
+      {{#mdl-button isIcon=true id="icon1"}}{{md-icon "add"}}{{/mdl-button}}
+      {{#mdl-tooltip isLarge=true for="icon1"}}New{{/mdl-tooltip}}
+    </div>
+
+    <div class="demo-group__component">
+      {{#mdl-button isIcon=true id="icon2"}}{{md-icon "delete"}}{{/mdl-button}}
+      {{#mdl-tooltip isLarge=true isTop=true for="icon2"}}Delete{{/mdl-tooltip}}
+    </div>
+
+    <div class="demo-group__component">
+      {{#mdl-button isIcon=true id="icon3"}}{{md-icon "verified_user"}}{{/mdl-button}}
+      {{#mdl-tooltip isLarge=true isLeft=true for="icon3"}}Verified{{/mdl-tooltip}}
+    </div>
+
+    <div class="demo-group__component">
+      {{#mdl-button isIcon=true id="icon4"}}{{md-icon "help"}}{{/mdl-button}}
+      {{#mdl-tooltip isLarge=true isRight=true for="icon4"}}Help{{/mdl-tooltip}}
+    </div>
+  </div>
+
+  <div class="demo-group__snippet">
+    {{code-snippet name="large-tooltips.hbs"}}
+  </div>
+</div>

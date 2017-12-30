@@ -14,9 +14,11 @@ Router.map(function() {
     this.route('loading');
     this.route('layout');
     this.route('menus');
+    this.route('slider');
     this.route('snackbar');
-    this.route('toggles');
     this.route('text-fields');
+    this.route('toggles');
+    this.route('tooltip');
   });
 });
 

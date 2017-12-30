@@ -1,0 +1,27 @@
+<h2>Slider</h2>
+<style>
+.demo-group__row {
+  padding-top: 40px;
+}
+.demo-group__component {
+  max-width: 300px;
+  width: 30vw;
+}
+</style>
+
+<div class="demo-group">
+  <div class="demo-group__row">
+    <div class="demo-group__component">
+      {{mdl-slider value=slider1 update=(action "logUpdate" "slider1")}}
+    </div>
+
+    <div class="demo-group__component">
+      {{mdl-slider value=slider2 update=(action "logUpdate" "slider2")}}
+    </div>
+  </div>
+
+  <div class="demo-group__snippet">
+    <pre class="hljs mdl-color--yellow-100 mdl-color-text--primary" style="padding:10px">{{sliderResult}}</pre>
+    {{code-snippet name="slider.hbs"}}
+  </div>
+</div>
