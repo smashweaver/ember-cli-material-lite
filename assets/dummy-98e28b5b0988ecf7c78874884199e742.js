@@ -42,7 +42,7 @@ return JSON.stringify({foo:e},null,2)}),switchResult:t(function(){return JSON.st
 a(t,e,n),this.notifyPropertyChange("checkboxResult")},switchAction:function(e,n){var t=l(this,"switches")
 a(t,e,n),this.notifyPropertyChange("switchResult")},toggleAction:function(e,n){var t=l(this,"buttons")
 a(t,e,n),this.notifyPropertyChange("toggleResult")}}})}),define("dummy/helpers/and",["exports","ember-truth-helpers/helpers/and"],function(e,n){Object.defineProperty(e,"__esModule",{value:!0}),Object.defineProperty(e,"default",{enumerable:!0,get:function(){return n.default}}),Object.defineProperty(e,"and",{enumerable:!0,get:function(){return n.and}})}),define("dummy/helpers/asset-path",["exports","dummy/config/environment"],function(e,n){function t(e){var t=l(e,1)[0]
-return console.log(n.default.rootURL),n.default.rootURL+"assets/"+t}Object.defineProperty(e,"__esModule",{value:!0}),e.assetPath=t
+return n.default.rootURL+"assets/"+t}Object.defineProperty(e,"__esModule",{value:!0}),e.assetPath=t
 var l=function(){return function(e,n){if(Array.isArray(e))return e
 if(Symbol.iterator in Object(e))return function(e,n){var t=[],l=!0,a=!1,o=void 0
 try{for(var i,s=e[Symbol.iterator]();!(l=(i=s.next()).done)&&(t.push(i.value),!n||t.length!==n);l=!0);}catch(e){a=!0,o=e}finally{try{!l&&s.return&&s.return()}finally{if(a)throw o}}return t}(e,n)
