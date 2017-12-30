@@ -7,7 +7,7 @@ module.exports = {
       packages: [
         { name: 'ember-cli-sass' },
         { name: 'ember-cli-material-icons' },
-        { name: 'ember-truth-helpers '}
+        { name: 'ember-truth-helpers'}
       ]
     })
     .then(() => {
