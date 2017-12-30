@@ -1,5 +1,8 @@
+
+@import "_variables";
+
 .mdl-progress:not(.mdl-progress--indeterminate):not(.mdl-progress--indeterminate) > .auxbar,
 .mdl-progress:not(.mdl-progress__indeterminate):not(.mdl-progress__indeterminate) > .auxbar {
-  -webkit-mask: url(/images/buffer.svg?embed);
-  mask: url(/images/buffer.svg?embed);
+  -webkit-mask: url('#{$progress-image-path}/buffer.svg?embed');
+  mask: url('#{$progress-image-path}/buffer.svg?embed');
 }
