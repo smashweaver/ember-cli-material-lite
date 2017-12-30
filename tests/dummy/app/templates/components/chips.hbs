@@ -29,7 +29,7 @@
 
     <div class="demo-group__component">
       {{#mdl-chip "Image Contact" isContact=true}}
-        {{mdl-chip-contact "/assets/images/user.jpg" isImage=true}}
+        {{mdl-chip-contact (asset-path "images/user.jpg") isImage=true}}
       {{/mdl-chip}}
     </div>
   </div>
@@ -48,7 +48,7 @@
 
     <div class="demo-group__component">
       {{#mdl-chip "Contact Chip" isContact=true isDeletable=true deleted=(action "logAction" "Delete button of contact was clicked")}}
-        {{mdl-chip-contact "/assets/images/user.jpg" isImage=true}}
+        {{mdl-chip-contact (asset-path "images/user.jpg") isImage=true}}
       {{/mdl-chip}}
     </div>
   </div>
