@@ -57,14 +57,6 @@ let MdlTextfield = Component.extend({
   didInsertElement() {
     let mdl = new window.MaterialTextfield(this.element);
     set(this, '__mdlComponent', mdl);
-
-    // hack to resolve autocomplete issue with password
-    let input = this.$('.mdl-textfield__input');
-    if (input.attr('type') === 'password') {
-      next(this, function() {
-        this.$().addClass('is-dirty');
-      });
-    }
   },
 
   didReceiveAttrs() {
