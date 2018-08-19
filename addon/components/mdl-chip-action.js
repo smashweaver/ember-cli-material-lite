@@ -1,12 +1,18 @@
 import Component from '@ember/component';
 import layout from '../templates/components/mdl-chip-action';
 
-export default Component.extend({
+const MdlChipAction = Component.extend({
   layout,
+
+  attributeBindings: ['type'],
 
   classNames: ['mdl-chip__action'],
 
   tagName: 'button',
+
+  icon: 'cancel',
+
+  type: 'button',
 
   click(e) {
     e.stopPropagation();
@@ -17,3 +23,10 @@ export default Component.extend({
     }
   }
 });
+
+
+MdlChipAction.reopenClass({
+  positionalParams: ['icon']
+});
+
+export default MdlChipAction;
