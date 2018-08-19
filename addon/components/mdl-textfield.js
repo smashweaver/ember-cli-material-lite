@@ -1,7 +1,6 @@
 import Component from '@ember/component';
 import layout from '../templates/components/mdl-textfield';
 import { computed, get, set } from '@ember/object';
-import { next } from '@ember/runloop';
 
 const isNumeric = (value) => /^[0-9]*(.[0-9]+)*$/.test(value);
 

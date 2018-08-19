@@ -9,12 +9,16 @@ const MdlButton = Component.extend(RippleSupport, {
 
   tagName: 'button',
 
+  attributeBindings: [
+    'disabled',
+    'for',
+    'type'
+  ],
+
   classNames: [
     'mdl-button',
     'mdl-js-button'
   ],
-
-  attributeBindings: ['disabled', 'for'],
 
   classNameBindings: [
     'isAccent:mdl-button--accent',
@@ -25,6 +29,8 @@ const MdlButton = Component.extend(RippleSupport, {
     'isFabMini:mdl-button--mini-fab',
     'isIcon:mdl-button--icon'
   ],
+
+  type: 'button',
 
   disabled: or('isDisabled'),
 
